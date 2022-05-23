@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Simple backend app for TumaAero",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Martin Mrstik",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "sybase": "^1.2.3",
+    "sybase-promised": "^1.0.4"
+  }
+}
