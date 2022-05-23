@@ -11,7 +11,7 @@ footer {
     justify-content: center;
     padding: 1rem;
     border-radius: 10px;
-    background-color: rgba(#FFF, .5);
+    background-color: rgba(#FFF, .7);
   box-shadow: 15px 15px 35px rgba(#FFF, .2);
     p {
         margin: 0;

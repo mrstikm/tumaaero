@@ -1,7 +1,7 @@
 <template>
   <MainHeader :data="settings" @changeData="handleDataChange" :active="currentDataSource"/>
   <TopPanel :dataSource="currentDataSource" />
-  <BottomPanel :dataSource="currentDataSource" />
+  <!-- <BottomPanel :dataSource="currentDataSource" /> -->
   <MainFooter />
 </template>
 
@@ -9,46 +9,55 @@
 import MainHeader from './components/MainHeader.vue'
 import MainFooter from './components/MainFooter.vue'
 import TopPanel from './components/TopPanel.vue'
-import BottomPanel from './components/BottomPanel.vue'
+// import BottomPanel from './components/BottomPanel.vue'
 
 export default {
   components: {
     MainHeader,
     MainFooter,
     TopPanel,
-    BottomPanel,
   },
   data() {
     return {
       settings: {
         1: {
           nazev: 'CNC 1',
-          id: 'SberDat03',
-          pracoviste: ['Haas VF-2SS', 'Haas VF-3SS vak.', 'Haas VF-3SS'],
+          id: ['SberDat03'],
+          pracoviste: ['Haas VF-2SS', 'Haas VF-2SS vak.', 'Haas VF-3SS', 'Haas VF-3SS vak.'],
         },
         2: {
           nazev: 'CNC 2',
-          id: 'SberDat11',
-          pracoviste: ['Haas VF-3', 'Haas VF-6SS'],
+          id: ['SberDat09'],
+          pracoviste: ['Haas VF-6SS'],
         },
         3: {
           nazev: 'Elumatec',
-          id: 'SberDat12',
+          id: ['SberDat12'],
           pracoviste: ['Elumatec', 'SESTAVY', 'VSTUP', 'MEZI', 'VYSTUP']
         },
         4: {
           nazev: '3D Meřák',
-          id: '',
+          id: ['SberDat08'],
           pracoviste: ['3D MERENI', 'SESTAVY', 'ZAMECNICI']
         },
         5: {
-          nazev: 'Brusírna',
-          id: '',
+          nazev: 'Pískovna',
+          id: ['SberDat02','SberData07','SberDat06'],
           pracoviste: ['BRUS', 'BRUSH']
         },
         6: {
+          nazev: 'Brusírna 2',
+          id: ['SberDat07'],
+          pracoviste: ['BRUS', 'BRUSH']
+        },
+        7: {
+          nazev: 'Brusírna 3',
+          id: ['SberDat06'],
+          pracoviste: ['BRUS', 'BRUSH']
+        },
+        8: {
           nazev: 'Pila',
-          id: '',
+          id: ['SberData01'],
           pracoviste: ['']
         }
       },
@@ -89,7 +98,7 @@ body {
   width: 100%;
   overflow-y: auto;
   border-radius: 10px;
-  background-color: rgba(#FFF, .5);
+  background-color: rgba(#FFF, .7);
   box-shadow: 15px 15px 35px rgba(#FFF, .2);
   padding: 1rem;
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
