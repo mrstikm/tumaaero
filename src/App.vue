@@ -46,12 +46,12 @@ export default {
           pracoviste: ['BRUS', 'BRUSH']
         },
         6: {
-          nazev: 'Brusírna 2',
+          nazev: 'Brusírna 1',
           id: ['SberDat07'],
           pracoviste: ['BRUS', 'BRUSH']
         },
         7: {
-          nazev: 'Brusírna 3',
+          nazev: 'Brusírna 2',
           id: ['SberDat06'],
           pracoviste: ['BRUS', 'BRUSH']
         },
