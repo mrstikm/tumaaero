@@ -89,7 +89,6 @@ export default {
                             'charset': 'utf-8', 
                         },
                     )
-                    console.log(response.data.payload);
                     resolve(response.data.payload.filter(row => {
                         return this.dataSource.id.includes(row.IdZarizeni) && row.ZahMnozstvi > 0
                     }))
