@@ -27,7 +27,7 @@ export default {
         },
         2: {
           nazev: 'CNC 2',
-          id: ['SberDat09'],
+          id: ['SberDat11'],
           pracoviste: ['Haas VF-6SS'],
         },
         3: {
@@ -37,27 +37,27 @@ export default {
         },
         4: {
           nazev: '3D Meřák',
-          id: ['SberDat08'],
+          id: ['SberDat10'],
           pracoviste: ['3D MERENI', 'SESTAVY', 'ZAMECNICI']
         },
         5: {
           nazev: 'Pískovna',
-          id: ['SberDat02','SberData07','SberDat06'],
+          id: ['SberDat02','SberDat08','SberDat06'],
           pracoviste: ['BRUS', 'BRUSH']
         },
         6: {
           nazev: 'Brusírna 1',
-          id: ['SberDat07'],
+          id: ['SberDat08'],
           pracoviste: ['BRUS', 'BRUSH']
         },
         7: {
           nazev: 'Brusírna 2',
-          id: ['SberDat06'],
+          id: ['SberDat09'],
           pracoviste: ['BRUS', 'BRUSH']
         },
         8: {
           nazev: 'Pila',
-          id: ['SberData01'],
+          id: ['SberDat01'],
           pracoviste: ['']
         }
       },
