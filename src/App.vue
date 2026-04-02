@@ -1,14 +1,18 @@
 <template>
-  <MainHeader :data="settings" @changeData="handleDataChange" :active="currentDataSource"/>
+  <MainHeader
+    :data="settings"
+    @changeData="handleDataChange"
+    :active="currentDataSource"
+  />
   <TopPanel :dataSource="currentDataSource" />
   <!-- <BottomPanel :dataSource="currentDataSource" /> -->
   <MainFooter />
 </template>
 
 <script>
-import MainHeader from './components/MainHeader.vue'
-import MainFooter from './components/MainFooter.vue'
-import TopPanel from './components/TopPanel.vue'
+import MainHeader from "./components/MainHeader.vue";
+import MainFooter from "./components/MainFooter.vue";
+import TopPanel from "./components/TopPanel.vue";
 // import BottomPanel from './components/BottomPanel.vue'
 
 export default {
@@ -21,64 +25,69 @@ export default {
     return {
       settings: {
         1: {
-          nazev: 'CNC 1',
-          id: ['SberDat03'],
-          pracoviste: ['Haas VF-2SS', 'Haas VF-2SS vak.', 'Haas VF-3SS', 'Haas VF-3SS vak.'],
+          nazev: "CNC 1",
+          id: ["SberDat03"],
+          pracoviste: [
+            "Haas VF-2SS",
+            "Haas VF-2SS vak.",
+            "Haas VF-3SS",
+            "Haas VF-3SS vak.",
+          ],
         },
         2: {
-          nazev: 'CNC 2',
-          id: ['SberDat11'],
-          pracoviste: ['Haas VF-6SS'],
+          nazev: "CNC 2",
+          id: ["SberDat11"],
+          pracoviste: ["Haas VF-6SS"],
         },
         3: {
-          nazev: 'Elumatec',
-          id: ['SberDat12'],
-          pracoviste: ['Elumatec', 'SESTAVY', 'VSTUP', 'MEZI', 'VYSTUP']
+          nazev: "Elumatec",
+          id: ["SberDat12"],
+          pracoviste: ["Elumatec", "SESTAVY", "VSTUP", "MEZI", "VYSTUP"],
         },
         4: {
-          nazev: '3D Meřák',
-          id: ['SberDat10'],
-          pracoviste: ['3D MERENI', 'SESTAVY', 'ZAMECNICI']
+          nazev: "3D Meřák",
+          id: ["SberDat10"],
+          pracoviste: ["3D MERENI", "SESTAVY", "ZAMECNICI"],
         },
         5: {
-          nazev: 'Pískovna',
-          id: ['SberDat02','SberDat08','SberDat06'],
-          pracoviste: ['BRUS', 'BRUSH']
+          nazev: "Pískovna",
+          id: ["SberDat02", "SberDat08", "SberDat09"],
+          pracoviste: ["BRUS", "BRUSH"],
         },
         6: {
-          nazev: 'Brusírna 1',
-          id: ['SberDat08'],
-          pracoviste: ['BRUS', 'BRUSH']
+          nazev: "Brusírna 1",
+          id: ["SberDat08"],
+          pracoviste: ["BRUS", "BRUSH"],
         },
         7: {
-          nazev: 'Brusírna 2',
-          id: ['SberDat09'],
-          pracoviste: ['BRUS', 'BRUSH']
+          nazev: "Brusírna 2",
+          id: ["SberDat09"],
+          pracoviste: ["BRUS", "BRUSH"],
         },
         8: {
-          nazev: 'Pila',
-          id: ['SberDat01'],
-          pracoviste: ['']
-        }
+          nazev: "Pila",
+          id: ["SberDat01"],
+          pracoviste: [""],
+        },
       },
       currentDataSource: null,
       testData: null,
-    }
+    };
   },
   methods: {
     handleDataChange($event) {
-      this.currentDataSource = $event
+      this.currentDataSource = $event;
     },
   },
-}
+};
 </script>
 
 <style lang="scss">
 body {
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
-  background: radial-gradient(rgba(#1e4681, .7) 0%, rgba(#1e4681, 1) 100%);
+  font-family: "PT Sans", sans-serif;
+  background: radial-gradient(rgba(#1e4681, 0.7) 0%, rgba(#1e4681, 1) 100%);
 }
 * {
   box-sizing: border-box;
@@ -98,13 +107,13 @@ body {
   width: 100%;
   overflow-y: auto;
   border-radius: 10px;
-  background-color: rgba(#FFF, .7);
-  box-shadow: 15px 15px 35px rgba(#FFF, .2);
+  background-color: rgba(#fff, 0.7);
+  box-shadow: 15px 15px 35px rgba(#fff, 0.2);
   padding: 1rem;
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-  &::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
   }
   .error {
     display: flex;
@@ -117,27 +126,28 @@ body {
   }
 }
 .loading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    & > div {
-        width: 78px;
-        height: 78px;
-        border-radius: 50%;
-        border: 5px solid #1e4681;
-        border-right-color: transparent;
-        animation: load 2s infinite;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  & > div {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    border: 5px solid #1e4681;
+    border-right-color: transparent;
+    animation: load 2s infinite;
+  }
 }
 .data-wrapper {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
-th, td {
-    border-bottom: 1px solid #000;
-    text-align: center;
-    padding: 1em;
+th,
+td {
+  border-bottom: 1px solid #000;
+  text-align: center;
+  padding: 1em;
 }
 @keyframes load {
   0% {
